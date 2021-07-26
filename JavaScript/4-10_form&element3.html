@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>formとelement練習</title>
+	<script type="text/javascript">
+		function pop() {
+			var i;
+			i = 0;
+			while (i < 3) {
+				window.document.forms[0].elements[i].value = window.prompt(i, "");
+				i++;
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<form>
+		0:<input type="text"><br>
+		1:<input type="text"><br>
+		2:<input type="text"><br><br>
+		<input type="button" value="文字入れスタート" onClick="pop()">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>formとelement２</title>
+	<style type="text/css">
+		img {
+			display: inline;
+		}
+	</style>
+	<script type="javascript">
+
+
+	</script>
+</head>
+
+<body>
+	<h2>
+		formとかelement（forｍのなかのinputとかのタグ）に名前をつけんときは、<br>勝手にforms[0]とかelement[1]とかが名前になるから、それをjavascriptにつけると動くよ！
+	</h2>
+
+	form②-1(forms[0])<br>
+	<form>
+		名前(elemets[0])<input type="text">
+		<br><br>
+		食べ物<br>
+		<input type="checkbox">オムライス(elements[1])
+		<input type="checkbox">ハンバーグ(elements[2])
+		<input type="checkbox">カレー(elements[3])<br>
+	</form>
+	form②-2(forms[1])<br>
+	<form>
+		名前(elements[0]<input type="text">
+		<br><br>
+		花の名前<br>
+		<input type="checkbox">さくら(elements[1])
+		<input type="checkbox">すみれ(elements[2])
+		<input type="checkbox">ひまわり(elements[3])
+	</form>
+
+	<script type="text/javascript">
+		window.alert("実行２回目！");
+		window.document.forms[0].elements[0].value = "平尾こーすけ";
+		window.document.forms[0].elements[1].checked = true;
+		window.document.forms[0].elements[2].checked = false;
+		window.document.forms[0].elements[3].checked = false;
+		window.document.forms[1].elements[0].value = "平尾タダノブ";
+		window.document.forms[1].elements[1].checked = false;
+		window.document.forms[1].elements[2].checked = true;
+		window.document.forms[1].elements[3].checked = false;
+
+	</script>
+
+	<img src="IMG_3672.jpeg" height="800px">
+	<img src="IMG_3673.jpeg" height="800px">
+</body>
+
+</html>

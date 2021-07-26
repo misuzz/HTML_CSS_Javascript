@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>画像をクリックで出す！</title>
+	<script type="text/javascript">
+		function showImg(gazou, sentence) {
+			window.document.images[0].src = gazou;
+			window.document.images[0].title = sentence;
+		}
+	</script>
+	<style type="text/css">
+	img{
+		cursor: pointer;
+	}
+
+	</style>
+</head>
+
+<body>
+	<form>
+		<h1>クセが強いいらすとや画像を並べたよ！</h1>
+		<p>画像にカーソル合わせると説明文が出るよ！</p>
+		<input type="button" value="くせがつよい１"
+			onClick="showImg('https://yasei-blog.com/wp-content/uploads/2019/06/1311a969c36d7d2b660740751915bf67_optimized.png', 'VRで肘をぶつけた人')">
+		<input type="button" value="くせがつよい２"
+			onClick="showImg('https://yasei-blog.com/wp-content/uploads/2019/06/94d6a418ed7461af7f2aef6ca991746e_optimized.png','壊れたゲーム機でゲームをする様子')">
+		<input type="button" value="くせがつよい３"
+			onClick="showImg('https://yasei-blog.com/wp-content/uploads/2019/06/f5ebd660316d74c1c423fd42f22d17ed_optimized.png','意識が高い様子')">
+	</form>
+	<h1>window.document.images[0]</h1>
+	<h2>→添字番号でimagesオブジェクトにオブジェクト名をつける</h2>
+	<p><img src="https://yasei-blog.com/wp-content/uploads/2019/06/d3a16458f3aa4250305c6484eb6ccc1f_optimized.png" width="400" title="テレビの音にアレクサが反応している様子"></p>
+
+</body>
+
+</html>

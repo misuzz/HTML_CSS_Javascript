@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>windowオブジェクト</title>
+	<style type="text/css">
+	input:hover{
+		background-color:pink;
+		cursor: pointer;
+	}
+	input{
+		font-size:30px;
+		border-style: outset, ridge;
+		border-width:5px;
+		text-align: center;
+	}
+	</style>
+	<script type="text/javascript">
+	var newwindow1;　/*グローバル変数*/
+		function newWindowOpen() {
+			newwindow1 = window.open('test.html', 'window1', 'toolber=yes,  location:no, status=yes, menubar=yes, scrollbars=yes, width=500, height=500');
+			newwindow1.document.write("<p>window1っていう新しいwindowオブジェクト作って新規タブ開いたよ！</p>");
+		}
+		function newWindowClose(){
+			newwindow1.close();
+		}
+	</script>
+</head>
+
+<body>
+	<h1>新しいwindowを開くには‥</h1>
+	<h3>■window.open('外部ファイル', 'ウィンドウ名', 'スタイル');</h3>
+	<h3>var newwindow1 = window.open('test.html', 'window1', 'toolber=yes,  status=yes, menubar=yes, scrollbars=yes, width=500, height=500');</h3>
+	<p>"newwindow1"は「window1というtextウィンドウを新規に開く」能力がある「オブジェクト」<br>
+	３つ目項目で、実際に出すwindowのスタイルを決めれる（大きさとか）<br>
+新しいウィンドウを開く指示をした元々のウィンドウを「opner」っていうよ</p>
+	<h3>■window.close();で既存のwindowを閉じる！</h3>
+	<p>つまり、「window1.close();」は、「window1っていう名前のwindowを閉じる」って意味！</p>
+	<input type="button" value="新規windowを開く" onClick="newWindowOpen()"  onMouseOver="cursole">
+	<input type="button" value="新規windowを閉じる" onClick="newWindowClose()">
+	<input type="button" value="このwindowを閉じる" onClick="window.close()">
+</body>
+
+</html>

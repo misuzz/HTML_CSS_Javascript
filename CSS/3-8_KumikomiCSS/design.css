@@ -1,0 +1,45 @@
+body {
+	background-color: aquamarine;
+}
+
+h1 {
+	font-size: larger;
+	background-color: yellow;
+	text-align: center;
+}
+
+p {
+	color: blue;
+	text-align: center;
+}
+
+a:link {
+	color: blue
+}
+
+a:visited {
+	color: green
+}
+
+a:hover {
+	color: red;
+}
+
+img {
+	height: 200px;
+}
+
+.katamari {
+	width: 100%;
+	text-align: center;
+}
+
+.cat{
+	font-weight: bold;
+	vertical-align: 100px;  /*ｐｘを指定すると、「隣の要素のbaselineから上に〇〇px上がる」の指定ができる*/
+}
+
+.back {
+	clear: left;
+	text-align: center;
+}

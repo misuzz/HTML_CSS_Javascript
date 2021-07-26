@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=“Shift_JIS”>
+	<title>文字のデザイン！</title>
+	<style type="text/css">
+		h1 {color: red;}
+		p b {color: blue;}
+		.smaller {font-size: smaller;}
+		.small {font-size: small;}
+		p.medium {font-size: medium;}
+		.large {font-size: large;}
+		.larger {font-size: larger;}
+		.font_10px{font-size:10px}
+		.font_10pt{font-size:10pt;}
+		.font_5mm{font-size: 5mm;}
+		.font_150{font-size: 150%;}
+		.font.1em{font-size:1em}
+		.mincho{font-family: "MS 明朝",serif;}
+		.gothic{font-family: "MS ゴシック",sans-serif;}
+		.font-style{font-style:italic;}
+		.font-weight{font-weight:bold;}
+		.line-throught{text-decoration:line-through;}
+		.underline{text-decoration:underline;}
+		.overline{text-decoration:overline;}
+		.algin_left{text-align:left;}
+		.algin_center{text-align:center;}
+		.algin_right{text-align:right;}
+		span.super{vertical-align:super;}
+		span.sub{vertical-align:sub;}
+		span.beki{vertical-align:super; font-size:0.5em;}
+	</style>
+</head>
+
+<body>
+	<h1>最初は「head」に &lt;style type="text/css"&gt;~~&lt;/style&gt;と入れるとCSS！</h1>
+	<p>色の指定方法は、<b>①カラー名　②16進数　③10進数（rgb(0,0,0)） ④％（rgb(0%,0%,0%)）</b><br>
+		bとかで子要素作ると色変わるよ！</p>
+		<hr>
+	<h2>文字の大きさ！</h2>
+	<p class="smaller">smallerの文字</p>
+	<p class="small">smallの文字の大きさ</p>
+	<p class="medium">mediumの文字</p>
+	<p class="large">laegeの文字</p>
+	<p class="larger">largerの文字</p>
+	<hr>
+<p class="font_10px">10pxってこんぐらい。wordは10.5px</p>
+<p class="font_10pt">10ptってこんぐらい</p>
+<hr>
+<p class="font_5mm">5mm指定</p>
+<p class="font_150">150%指定</p>
+<p class="font_1em">1em(基準の高さ)指定</p>
+<hr>
+<h2>フォント指定！</h2>
+<p class="mincho">明朝体<br>
+1234567890あいうえおカキクケコ１２３４５</p>
+<p class="gothic">ゴシック<br>
+1234567890あいうえおカキクケコ１２３４５</p>
+<h3>font-familyで指定したものがなさそうなら、"MS明朝",〇〇;}と書いて、明朝がなかった時〇〇を表示させる</h3>
+<p>serifは明朝体の総称ファミリ、sans-serifはゴシックの総称ファミリ<br>
+	cursiveは筆記体、fantasyは装飾、monospaceは固定幅のフォントの総称。<br>
+fontの名前に半角スペースが入ってたら""で囲む</p>
+<hr>
+<h2>文字の装飾</h2>
+<p class="font-style">font-styleで斜体_italicとnormal</p>
+<p class="font-weight">font-weightで太字_boldとnormal</p>
+<p class="line-throught">text-decoration:line-throughtで取り消し線</p>
+<p class="underline">text-decoration:underllineで下線</p>
+<p class="overline">text-decoration:overlineで上線</p>
+<p class="none">text-decoration:noneでもとに戻す</p>
+<hr>
+<p class="algin_left">text-algin:leftで左寄せ</p>
+<p class="algin_center">text-algin:centerで中央寄せ</p>
+<p class="algin_right">text-algin:rightで右寄せ</p>
+<hr>
+<p>vertical-algin:superで文字を<span class="super">上の方に</span>ずらす</p>
+<p>vertical-algin:subで文字を<span class="sub">下の方に</span>ずらす</p>
+<hr>
+<p>y=ax<span class="beki">2</span>+bx+c<br>
+</body>
+
+</html>

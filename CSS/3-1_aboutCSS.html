@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=“Shift_JIS”>
+	<title>CSSの概要！</title>
+</head>
+
+<body>
+	<h2><a id="pagetop">スタイル規則の書式</a></h2>
+	<ol>
+		<li>セクレタ{プロパティ：値；}</li>
+		<p>p{color:red:}みたいな</p>
+		<li>セクレタ{プロパティ:値;プロパティ：値；....}</li>
+		<p>p{color:red;font-size:large;}みたいな</p>
+		<li>セクレタ,セクレタ,セクレタ{プロパティ：値；}</li>
+		<p>h1,h2,h3{color:red;}みたいな</p>
+	</ol>
+	<h2>子孫セクレタ！</h2>
+	<p>例えば、　&lt;p&gt;&lt;b&gt;んわんわ&lt;/b&gt;おうおう&lt;/p&gt;　だとすると<br>
+		ｂは子、ｐは親。<br>
+		CSSで<br>
+		p b{color:red;}って書くと、<br>
+		「親がｐで子がｂのところは赤字になるよー」ってなる</p>
+<h2>継承！</h2>
+<p>pの中にspan書いた時、<br>
+pで指定したものもspanに反映されるよ！</p>
+</body>
+<h3>あーここんとこだけ色変えたいんだけどどうやって指定しよかな、、</h3>
+<p>htmlのタグに「class="〇〇"」つけてくれればCSSで指定できるよ！<br>
+例：&lt;p class="red"&gt;赤にしたいよ&lt;p&gt;<br>
+<h4>このときのCSSの書き方２選</h4>
+<ol>
+	<li>p.red{color:red;}</li>
+	<li>.red{color:red;}</li>
+</ol>
+</p>
+<h2>もう既に決められてるクラス名</h2>
+<p>もう決まってるクラスを使うときは.クラス名じゃなくて「:クラス名」</p>
+<ol>
+	<li>a:link{color:blue;}</li>
+	<p>リンクになってるところの色を変える</p>
+	<li>a:visited{coloer:red;}</li>
+	<p>既にアクセスしたリンクの色を変えれる</p>
+	<li>a:hover{color:red;}</li>
+	<p>マウスを載せた時の色を変えれる</p>
+	<li>a:active{color:red:}</li>
+	<p>クリックした瞬間の色を変えれる</p>
+</ol>
+<h2>IDセクレタ</h2>
+<p>ページの中で１回しか使えないクラス！<br>
+例：htmlで div id="header"としたら、<br>
+CSSで　#header{background-color:red;} と書く</p>
+
+<h1>いーじょう！</h1>
+<a href="#pagetop">ページトップへ</a>
+</html>

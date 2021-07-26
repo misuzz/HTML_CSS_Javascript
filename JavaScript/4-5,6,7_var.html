@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>変数と演算子とif,while</title>
+	<style type="text/css">
+	body{
+		background-color: aquamarine;
+	}
+	h1{
+		display: flex;
+		justify-content: center;
+		font-family: 'Times New Roman', Times, serif;
+	}
+	h1.kechi{
+		font-size: 100px;
+		margin-top: 200px;
+		display: flex;
+		justify-content: center;
+	}
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+	if(window.confirm("ここからは計算問題の練習です"))
+	{
+		var yen, i;
+		yen = 120;
+		i = 1;
+		window.document.write("	<h1>毎日1本ずつ120円のプロテイン買ったら、50日後までにいくら払った？</h1>");
+		while(i < 50){
+			window.document.write(i+"日目なので合計で"+yen+"円分プロテイン代金を払いました！<br>");
+			i++;
+			yen+=120;
+		};
+		window.document.write("<h1>"+i+"日目なので、今まで"+yen+"円をprotain代に溶かしました！！<br></h1>"+"<h1>プロテインだね！！！！！！</h1>");
+	}
+	else{
+		window.document.write("<h1 class='kechi'>いいじゃんケチ！！！！！！！！</h1>")
+	}
+	</script>
+</body>
+
+</html>

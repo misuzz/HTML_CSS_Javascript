@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>SWITCH文</title>
+</head>
+
+<body>
+	<h1>SWITCH文!</h1>
+	<h3>switch(変数){case 値: 命令; break;...... default:....;}</h3>
+	<script type="text/javascript">
+		var x = 10;
+		switch (x) {
+			case 5:
+				window.document.write("xは5です");
+				break;
+			case 10:
+				window.document.write("xは10です" + "<br>");
+				break;
+			default:
+				window.document.write("は？");
+				break;
+		}
+	</script>
+	<h1>WHILE文の中にbreak;!</h1>
+	<h3>while(n<=10){<br>
+			if(n==5){<br>
+			break;}<br>
+			window.document.write(n);<br>
+			n++;<br>
+			}</h3>
+	<script type="text/javascript">
+		var n = 0;
+		while (n <= 10) {
+			if (n == 5) {
+				break;
+			}
+			window.document.write(n);
+			n++;
+		}
+	</script>
+	<h1>continueは処理をスキップしたい時！</h1>
+	<h3>while(n<=10){<br>
+			if(n==5){<br>
+			n++;<br>
+			continue;}<br>
+			window.document.write(n);<br>
+			n++;<br>
+			}</h3>
+			<h2>↑５だけスキップされるよ！</h2>
+	<script type="text/javascript">
+		var n = 0;
+		while (n <= 10) {
+			if (n == 5) {
+				n++;
+				continue;
+			}
+			window.document.write(n);
+			n++;
+		}
+	</script>
+</body>
+
+</html>

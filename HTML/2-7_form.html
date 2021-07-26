@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang=“ja”>
+
+<head>
+	<meta charset=“Shift_JIS”>
+	<title>フォームの作成方法</title>
+</head>
+
+<body>
+	<h2>まずは&lt;form&gt;で囲むとその中がフォームになるよ！</h2>
+	<a href="#inputname">いいから入力フォーム見たい</a>
+	<h3>部品inputだよ<br>
+		&lt;input&gt;&lt;/input&gt;って書くよ<br>
+		inputはコントロールを作成するよ！</h3>
+	<ul>
+		<li>input type="text"<br>
+			->１行入力テキストボックス！</li>
+		<li>input type="text" size="20"<br>
+			->半角で２０文字表示するよ</li>
+		<li>input type="text" maxlength="30"<br>
+			->入力可能な文字数は半角で３０文字ですよ</li>
+		<li>input type="radio"<br>
+			->ぽち</li>
+		<li>input type="type" checked="true"<br>
+			->初期状態からポチが入ってるよ</li>
+		<li>input type="checkbox"<br>
+			->radioとちがって複数チェックできるよ</li>
+		<li>input type="~~" name="なんちゃら"<br>
+			->id属性と同じで、その場所に名前をつけるよ<br>
+			->これつけてあげないと、ラジオボタン作っても全部に点つけれちゃうよ<br>
+			これで同じカテゴリだよーってやってあげると選択式になるよ！</li>
+		<li>input type="~~" value="なんちゃら"<br>
+			->textならテキストの中に「なんちゃら」って入るし、<br>
+			->submitボタンであればボタンに「なんちゃら」って入るよ</li>
+	</ul>
+	<h3>部品selectだよ<br>
+		プルダウン作るよ！<br>
+		&lt;select&gt;&lt;/select&gt;って書くよ</h3>
+	<ul>
+		<li>option ~ /option<br>
+			オプションの数だけ選択肢増えるよ！</li>
+		<li>select size="1" <br>
+			選択肢を何個表示させるか</li>
+		<li>select name="なんちゃら"<br>
+			idみたいに名前つけれる</li>
+	</ul>
+	<h3>selectで使う部品optionだよ</h3>
+	<ul>
+		<li>option selected<br>
+			デフォルトで何を表示させるか決めとけるよ</li>
+		<li>option value<br>
+			データの値が決めれる？？？？？？？？？<br>
+			->valueの名前がDBに飛んでくよ</li>
+	</ul>
+	<h3>部品textareaだよ</h3>
+	<p>複数行のテキストボックスを作成<br>
+		text cols="20" rows="20"みたいに書くと大きさ決めれるよ</p>
+	<form>
+		<h2><a id="inputname">つくるよ！！！</a></h2>
+		<p>
+			お前の名字をいれろ
+			<input type="text" size=20 maxlength="30" value="名字ってわかる？"><br>
+			お前の名前をいれろ
+			<input type="text" size=20 maxlength="30" value="名前ってわかる？">
+		</p>
+		<p>
+			あなたは１８歳以上？<br>
+			<input type="radio" name="sex" checked="true">はい　<input type="radio" name="sex">いいえ<br>
+			nameで同じグループだよーってやってね
+		</p>
+		<p>
+			好きな芸人は？<br>
+			<select size="1" name="geinin">
+				<option selected>サンドイッチマン</option>
+				<option>トータルテンボス</option>
+				<option>バナナマン</option>
+				<option>もう中</option>
+				<option>流れ星</option>
+			</select>
+		</p>
+		<p>
+			好きなDJは？<br>
+			<input type="checkbox" name="DJ">Allan Walker
+			<input type="checkbox" name="DJ">David Guetta
+			<input type="checkbox" name="DJ">Zedd
+		</p>
+		<p>
+			何でも書ける欄<br>
+			<textarea cols="50" rows="50">ここに入れると枠の中に勝手に表示されるよ</textarea>
+		</p>
+		<input type="submit" value="送信ボタン">
+		<input type="reset" value="やっぱやめる">
+	</form>
+	<p><a href="2-6_link.html">2-6に戻る</a></p>
+</body>
+
+</html>

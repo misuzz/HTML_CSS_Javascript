@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=Shift_JIS”>
+	<title>リストのデザイン！</title>
+	<style type="text/css">
+		body {
+			background-color:yellowgreen;
+			margin-left: 50px;
+			margin-right: 50px;
+			background-image: url(kasahiyoko.png);
+			background-repeat: repeat;
+			background-size:100px;
+		}
+
+		h1 {
+			background-color: black;
+			color:#ffffff;
+			text-shadow:
+				2px 2px 1px #000000,
+				-2px 2px 1px #000000,
+				2px -2px 1px #000000,
+				-2px -2px 1px #000000,
+				2px 0px 1px #000000,
+				0px 2px 1px #000000,
+				-2px 0px 1px #000000,
+				0px -2px 1px #000000;
+			padding-left: 10px;
+			background-image: url(https://1.bp.blogspot.com/-H8EXsueDTN0/WzC-TScxOhI/AAAAAAABNAc/PQjp-gdFmeIXn6XWCa60jXFOrPcr5PU2ACLcBGAs/s800/chouchin_matsuri_red.png);
+			background-position: center;
+			background-size: 50px;
+		}
+
+		p {
+			font-weight: bold;
+		}
+
+		ul {
+			list-style-type: square;
+		}
+
+		ol {
+			list-style-type: upper-roman;
+		}
+
+		ul.mark {
+			list-style-image: url(../HTML/fuck.gif);
+			margin-left: 50px;
+		}
+
+		#menu li {
+			list-style-type: none;
+			background-color: pink;
+			border-bottom: 1px dotted;
+			line-height: 140%;
+			width: 50px;
+			padding: 3px;}
+
+		#menu ul {
+			border: 1px solid #b55c29;
+			width: 50px
+		}
+
+		#test{
+			background-color: #ffffff;
+			padding-left: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>機能としてあるリストのデザインにする</h1>
+	<div id="test">
+	<ul>
+		<p>ul{list-style-type:形}でリストのデザイン変わるよ！<br>
+			disk:黒丸<br>
+			circle:白丸<br>
+			square:四角<br>
+			none:表示しない</p>
+		<li>東</li>
+		<li>南</li>
+		<li>西</li>
+		<li>北</li>
+	</ul>
+	</div>
+	<ol>
+		<p>ol{list-style-type:形}で１２３の書き方変わるよ！ <br>
+			decimal:デフォルト<br>
+			lower-roman:ⅰⅱⅲ<br>
+			upper-roman:ⅠⅡⅢ<br>
+			lower-alpha:abc<br>
+			upper-alpha:ABC</p>
+		<li>赤</li>
+		<li>青</li>
+		<li>黄色</li>
+	</ol>
+
+	<h1>画像を取ってそれをリストにする</h1>
+	<ul class="mark">
+		<p>ul{list-style-image:url(画像ファイルのURL)}<br>
+			<li>東</li>
+			<li>南</li>
+			<li>西</li>
+			<li>北</li>
+	</ul>
+	<h1>＜div　id="〇〇"＞と＃〇〇 タグの名前　にして、divの中全体を決めれるよ！</h1>
+	<div id="menu">
+		<ul>
+			<li>赤</li>
+			<li>青</li>
+			<li>黄色</li>
+		</ul>
+	</div>
+	<h1>背景のデザイン！</h1>
+	<div id="test">
+	<p>
+		background-colorで色変えれるよ！<br>
+		{}の中に続けて書いていけば色々指定できるよ！<br>
+		例：h1{background-color:red;
+		color:silver;}
+	</p>
+
+	<h3>背景に画像も入れれるよ！〜backgroundシリーズ〜</h3>
+	<p>｛background-image:url(画像のURLやファイル名)｝<br>
+		background-repeat:repeat-xとか-yとやると上で指定した画像を縦か横に繰り返しできるよ！</p>
+	<h3>background-position</h3>
+	<p>top、right,bottom,left,centerで背景画像の場所を変えれる</p>
+<h3>background-attachmentスクロールするかどうか</h3>
+<p>scroll,fixedで決めれるよ！</p>
+</div>
+</body>
+
+</html>

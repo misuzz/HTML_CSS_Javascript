@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="Shift_JIS”">
+	<title>floatの使い方！</title>
+	<style type="text/css">
+		img {
+			height: 200px;
+			float: left;
+		}
+		.text2{clear:left;
+		}
+		.red{
+			color: red;
+		}
+		span{
+			font-weight: bolder;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>floatとclear</h1>
+	<p class="text1">
+		<img src="kasahiyoko.png">
+		floatはテキストの回り込みの指定！<br>
+		floatしないと、画像の下に文章が出てくるよ<br>
+		imgタグ以外にも指定できるよ
+	</p>
+	<p class="red">
+		clear:leftしないとここに文章来ちゃうよ
+	</p>
+	<p class="text2">
+		今回は画像にfloat=leftを指定するよ<br>
+		そのままだと、上の段落もこの段落も勝手に画像の右側に出ちゃうよ<br>
+		<span>...そんなときは！</span><br>
+		"回り込ませたくないタグ"に対して<span>　「clear:leftとかrightとかboth」</span>　をすると戻るよ！<br>
+		leftとかrightとかbothとかは、"回り込ませたくないタグ"から見て、<br>
+		floatが実際に書かれてるものがどっちにあるかによるよ！<br>
+		例：今回だと、imgに対してfloatがかかってて、回り込ませたくないタグからimgタグは「左」にあるから<span>　clear:left;　</span>をtext2に書いてね
+
+	</p>
+
+</body>
+
+</html>

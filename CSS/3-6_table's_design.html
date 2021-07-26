@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=Shift_JIS”>
+	<title>リストのデザイン</title>
+	<style type="text/css">
+		table {
+			height: 250px;
+			width: 800px;
+			border:solid yellow 5px;
+			background-color:yellowgreen;
+			background-image: url(kasahiyoko.png);
+			background-position: center;
+			background-size: contain;
+			text-shadow:
+				2px 2px 1px #ffff,
+				-2px 2px 1px #ffff,
+				2px -2px 1px #ffff,
+				-2px -2px 1px #ffff,
+				2px 0px 1px #ffff,
+				0px 2px 1px #ffff,
+				-2px 0px 1px #ffff,
+				0px -2px 1px #ffff;
+		}
+th{
+	border:outset orange 3px;
+}
+		td {
+			text-align: center;
+			border:dotted orange 3px;
+		}
+
+		caption {
+			color: ra;
+			font-weight: bold;
+			font-size: larger;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
+		span {
+			font-weight: bold;
+			font-size: large;
+		}
+	</style>
+</head>
+
+<body>
+	<table border="5">
+		<caption>亘右の旅</caption>
+		<tbody>
+			<tr>
+				<th colspan="3">日程表</td> /*thにすれば中心による*/
+			</tr>
+			<tr>
+				<th>日にち</th>
+				<th>やること</th>
+				<th>備考</th>
+			</tr>
+			<tr>
+				<td>６月１８日</td>
+				<td>浜松動物園？</td>
+				<td>俺が早く浜松に来ないといけない</td>
+			</tr>
+			<tr>
+				<td>６月１９〜２０日</td>
+				<td>PCでなんかする？</td>
+				<td>サイトつくるとか</td>
+			</tr>
+			<tr>
+				<td>６月２１日</td>
+				<td>葦毛湿原？</td>
+				<td>晴れるといいねえ</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>tdに<span>text-align</span>すると、セル内の文字を中心とかに寄せれるよ！（左右）<br>
+		center,　right,　left,　justify(両端揃え)</p>
+	<p><span>vertical-align</span>すると、上下に寄せれるよ！(上下)<br>
+		top, middle, bottom</p>
+
+		<h3>border-collapse:値　セルの枠線の統合を指定！</h3>
+		<p>collapse:隣り合うセルの枠線を重ねちゃう（ブラウザによって優先順位が違う）<br>
+		separate:隣り合うセルの枠線を分離する</p>
+</body>
+
+</html>

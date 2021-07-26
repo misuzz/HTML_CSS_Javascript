@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>DATE,Arrayの使い方</title>
+	<style type="text/css">
+	span{
+		font-weight: bold;
+		color:red;
+		font-size: medium;
+	}
+	</style>
+	<script type="text/javascript">
+		var nowtime = new Date(); /*”nowtimeはオブジェクトに進化した！！*/
+		var aYear = nowtime.getFullYear();
+		var aMonth = nowtime.getMonth();
+		var aDate = nowtime.getDate();
+		var aHour = nowtime.getHours();
+		var aMinutes = nowtime.getMinutes();
+		var aSecounds = nowtime.getSeconds();
+		var array = new Array("日","月","火","水","木","金","土");
+		var Youbi = array[nowtime.getDay()];
+	</script>
+</head>
+
+<body>
+	<h1>DATEオブジェクト！</h1>
+	<ul>
+		<li>var 変数名　= new 組込みオブジェクト();　…　「組込みオブジェクト+new」で新しいオブジェクトを作ったよ！</li>
+		　　　↑変数は「インスタンス名」になるよ！<br>
+		（たい焼きの型（組込みオブジェクト）を使って、たい焼き（変数名）つくったよ）<br>
+	</ul>
+	<hr>
+	<h2>DATEオブジェクト</h2>
+	<p>getメゾットなので、新しく作ったオブジェクト「new　Date()」（今の時間が入ってるやつ）を使って、今の時間を細かく表示できるよ！</p>
+	<ul>
+		<li>getFullYear</li>
+		<li>getMonth※<br>
+		※こいつだけは0~11の数字を返してくるから、表示は 「+1」　！</li>
+		<li>getDate</li>
+		<li>getHours</li>
+		<li>getMinutes</li>
+		<li>getSeconds</li>
+		<li>getDay※<br>
+		※曜日を表示するメゾットだけど、「0~6」で返される。。。<br>
+	→<span>Arrayで配列作って、事前に0~6は日〜土ですよ！って入れておく！</span></li>
+	</ul>
+	<hr>
+	<script type="text/javascript">
+		window.document.write(nowtime,"<br>");
+		window.document.write("現在は",aYear,"年",aMonth+1,"月",aDate,"日",　Youbi,"曜日、",aHour,"時",aMinutes,"分",aSecounds,"秒です。<br>")
+	</script>
+	<hr>
+	<h1>Array配列の作り方！</h1>
+	<h3>■　var 変数　= new Array(配列の個数);<br>
+	■　var 変数　= new Array("代入する値を直接入れる","","",…)<br>
+　※[]じゃなくて()だよ！呼び出しは　変数[番号]だよ！</h3>
+	<p>var 変数名　= ['あああ', 'いいい','ううう'];　でも配列になるよ！<br>
+	var 変数名　=　[]; 　でも配列だと思ってくれるよ！<br>
+	変数名['apple']= 100; と書いて、配列の各箱に名前つけれるよ！（連想配列）</p>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="“Shift_JIS”">
+	<title>Javascriptの基礎！</title>
+	<style type="text/css">
+		#page {
+			width: 100%;
+			background-color: blanchedalmond;
+			margin: 0px;
+			border: solid;
+		}
+
+		#header {
+			border: white 1px solid;
+		}
+
+		#shosiki {
+			float: left;
+			width: 50%;
+			height: 380px;
+			margin: 0px;
+			border: black 1px solid;
+			box-sizing: border-box;
+			/*これを指定すると、背景、padding、線全部を含めて「widht:50%」と考えてくれるようになるよ！*/
+		}
+
+		#object {
+			float: right;
+			width: 50%;
+			height: 380px;
+			margin: 0px;
+			border: black 1px solid;
+			box-sizing: border-box;
+		}
+
+		#method {
+			clear: both;
+		}
+
+		h1 {
+			color: white;
+			background-color: black;
+			margin: 0px;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/*display:flex　にした時の中央寄せは justify-content:center; ！*/
+		}
+
+		h2 {
+			margin: 0px;
+			color: white;
+			background-color: black;
+			border: white 1px solid;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#shosiki p {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		h4 {
+			display: flex;
+			justify-content: center;
+			/* width:300px; */
+			border: black 3px double;
+			margin-top: 10px;
+		}
+
+		h3 {
+			margin: 10px;
+			text-decoration-line: underline;
+		}
+
+		p {
+			margin: 10px;
+		}
+
+		hr {
+			background-color: black;
+			height: 1px;
+		}
+
+		ol {
+			list-style: upper-roman;
+		}
+
+		img {
+			height: 50px;
+		}
+		span{
+			font-weight: bold;
+			font-size: larger;
+			padding:5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="page">
+		<div id="header">
+			<h1>JAVASCRIPTへようこそ</h1>
+		</div>
+		<div id="shosiki">
+			<h2>Javascriptの書式！</h2>
+			<p>■＜script type="text/javascript"＞＜/script＞の間にコードを書くと実行してくれる。<br>
+				■headでもbodyでもどっちでも認識してくれるよ。<br>
+				■でも、「headに書くのは定義部分、bodyに書くのは実行部分」って言われるらしい。</p>
+			<hr>
+			<p>□＜script type="javascript" src="ファイル名.js"＞＜/script＞と書けば、シートを読み込めるよ！<br>
+				□＜link rel="stylesheet" href="ファイル名.css" type="text/css"＞と書けば、CSSシートの読み込み！</p>
+
+		</div>
+		<div id="object">
+			<h2>Object</h2>
+			<p>既に用意されてる部品だよ！</p>
+			<ol>
+				<li>定義済みオブジェクト</li>
+				<ul>
+					<li>window　　　　　　　　　　　　　　…　webブラウザそのものを扱う</li>
+					<li>　　|-document　　　　　　　　　　…　webブラウザの表示領域を扱う</li>
+					<li>　　　　　|--form　　　　　　　　　…　form作ったときの全体を扱う</li>
+					<li>　　　　　　　　|---element　　　　…　form作ったときのそれぞれの要素を扱う</li>
+					<li>　　　　　|--images　　　　　　　　… 画像を扱う</li>
+				</ul>
+				<li>組み込みオブジェクト</li>
+				<ul>
+					<li>Date　　　…日付や時刻を扱う</li>
+					<li>Array　　　…配列にデータを格納する</li>
+					<li>String　　…文字列を扱う</li>
+				</ul>
+			</ol>
+		</div>
+		<div id="method">
+			<h2>メゾット(動作)とプロパティ（属性）</h2>
+			<h4>オブジェクト.メゾット（値）；<br>
+				オブジェクト.プロパティ　＝　”値”；</h4>
+			<h3><img src="CSS/kasahiyoko.png">「メゾット」って？</h3>
+			<p>■オブジェクトに対する動作だよ。<br>
+				■ボールペンの「芯を出す」、「文字を書く」<br>
+				■オブジェクト.メゾット（値）；で指定するよ<br>
+				■（例）wimdow.document.write("ねちんこちん");</p>
+			<h3><img src="CSS/kasahiyoko.png">「プロパティ」って？</h3>
+			<p>■各オブジェクトが持つ属性（性質）だよ<br>
+				■ボールペンの「ケース」はそのボールペンを識別しえる１つの部品（オブジェクト）<br>
+				■ケースの色は赤（プロパティ）<br>
+				■（例）window.document.bgColor="red";<br>
+				　　　　　ボールペン　.　ケースの色= 赤だよ
+			</p>
+			<div id="js">
+				<h2>ここからJavaScript書いてくよ！</h2>
+				<script type="text/javascript">
+					window.document.write("ねこちゃんちん<br>ちゃんちゃかちゃん" + "<br>" + "わんちゃんちん<br>" + "5*2=" + 5 * 2 + "<br>");
+					window.document.write("<img src='https://1.bp.blogspot.com/-_EGcw4_K_Gg/X5OcdVnBt_I/AAAAAAABb-4/-x75puslh3YXxR9quzevd_YNViomCdACgCNcBGAsYHQ/s400/pet_robot_cat.png'><br>ネコロボ<br>");
+					window.document.write("↑imgタグを使う時はタグごと””で囲むけど、srcは’’で囲む！");
+					window.alert("ほにゃほにゃ");
+					window.alert("AirPotsPROちょうだい！！！！");
+					window.prompt("OK押したらいいじゃない","ほにゃほにゃ");
+					window.confirm("今から文字を青くしてみます。拒否権ありません。");
+					window.document.bgColor="red";
+					window.document.fgColor="blue";
+
+				</script>
+				<ul>
+					<li><span>window.document.write("ほにゃほにゃ");</span>で、表示できるよ</li>
+					<li><span>window.document.write("＜img src='URL~~'ほにゃほにゃ");</span>でイメージ入れれるよ</li>
+					<li><span>window.alert="〇〇"</span>で、そのページを開いたときに出てくる警告ポップアップ！<br>
+					　window.alertは、「,」で区切ると、区切った前の値だけ出して終わっちゃうよ<br>
+				　alertが出てる間は他のjavascriptは止まってるよ</li>
+				<li><span>window.prompt("説明文","テキストボックスの初期値");</span>で入力するとこ出てくるよ！</li>
+				<li><span>window.confirm("確認すること");</span>で　「OK(true)」　「キャンセル(false」　出てくるよ！</li>
+				<li><span>window.document.bgColor="色";</span>で、背景色きめれるよ！<br>
+				「＝」だで注意！！！</li>
+				<li><span>window.document.fgColor="blue";</span>で文字の色決めれるよ！<br>
+				「＝」注意！！！</li>
+
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+</body>
+
+</html>

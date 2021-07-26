@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shit_JIS”">
+	<title>イベントハンドラー！</title>
+	<style type="text/css">
+		span {
+			color: red;
+		}
+
+		a {
+			display: block;
+			margin-top: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function onMouseOv() {
+			window.document.bgColor = "pink";
+		}
+		function onMouseOu() {
+			window.document.bgColor = "white";
+		}
+	</script>
+</head>
+
+<body>
+	<h1>★イベントハンドラーって？★</h1>
+	<h3>使用者が特定の操作をすることだよ！<br>
+		例えば、、ボタンがあれば「押す」したときに何させるか指定できるよ！<br>
+		テキストボックスあれば「入力する」したときになんかさせれるよ！</h3>
+	<h1>＜input type="button　とか　checkboxとか"　value="ボタンに表示される文字"<br>
+		<span>　onClick="javascript書けるよ！つまり関数を入れれるよ！;"</span>＞
+	</h1>
+	<h2>onMouseOver="javascript"書けるよ！<br>
+		マウス系は引数がないから、()だけつけとけばいいよ！<br>
+		例：onMouseOver="function名()"<br>
+		　「;」はいらんよ！</h2>
+	<p>イベントハンドラーはformの中で、htmlと一緒に書くよ。</p>
+		<a href="#" onMouseOver="onMouseOv()" onMouseOut="onMouseOu()">カーソル当ててみて</a>
+	<form>
+		<input type="button" value="ぽちっとな" onMouseOver="window.document.bgColor='yellow'"
+			onMouseOut="window.document.bgColor='transparent'" onClick="window.alert('押したな？？');">
+	</form>
+	<h2>■イベントハンドラー一覧</h2>
+	<img src="IMG_3667.jpeg" width=800px>
+
+</body>
+
+</html>

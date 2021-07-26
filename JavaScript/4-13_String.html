@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>Stringオブジェクト</title>
+	<script type="text/javascript">
+		function nTime() {
+			window.setTimeout("nTime", 5000);
+			var now = new Date();
+			var s = now.getSeconds();
+			if (s < 10) {s = "0" + s}
+			var seconds = new String(s);
+			window.document.forms[0].elements[0].value = seconds; /*sに入る秒数を文字列に変換した「seconds」をボタンに表示している*/
+		}
+
+	</script>
+</head>
+<body onLoad="nTime()"> /*bodyにonLoad="関数"; を入れると、「webが読み込まれたらイコール以下の関数動かすよー」ってなる*/
+	<h1>Stringオブジェクト！</h1>
+	<h2>　var 変数名　= new String(値)；<br>
+		　→Stringの後に書いた変数値や値を「文字列」にするよ！</h2>
+		<h2>.setTimeout("実行したい関数を入れる", "なんミリ秒後に実行させたい？");<br>
+			</h2>
+	<form>
+		<input type="button">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="”Shift_JIS”">
+	<title>formとelement</title>
+	<style type="text/css">
+		img {
+			display: inline;
+		}
+	</style>
+	<script type="javascript">
+
+
+	</script>
+</head>
+
+<body>
+	<h2>
+		＜form name="form1"＞<br>
+		　　text1:＜input type="text" name="text1" size=30＞<br>
+		　　text2:＜input type="text" name="text2" size=30＞<br>
+		＜/form＞<br>
+		<ol>
+			<li>formで囲む</li>
+			<li>nameでformに名前をつける</li>
+			<li>formの中でも、＜ｐ＞タグの中に入ってるなら、ベタで打ち込んだ文字はpタグとして表示されるよ</li>
+			<li>formタグの中にinputタグとか書くと思うけど、nameで名前つければ、javascriptで場所指定して文字入れれるよ</li>
+			<li>javascriptで実行するときは、　window.document.form1.text1.value="入れる文字"</li>
+			<li>↑documentオブジェクトにある、form1って名前のフォームオブジェクトの、text1っていう名前のelementオブジェクトが持つ、value(textに名前いれるやつ)に、=以下の文字入れてね！
+			</li>
+		</ol>
+	</h2>
+	<p>
+		form:ここにタイトル入るよ１<br>
+	<form name="form1">
+		text1:<input type="text" name="text1" size=30>
+		text2:<input type="text" name="text2" size=30>
+	</form>
+	</p>
+
+	<p>
+		form:ここにタイトル入るよ２<br>
+	<form name="form2">
+		んわんわ★<input type="text" name="text1" size=30>
+		んわんわ★<input type="text" name="text2" size=30>
+	</form>
+	</p>
+
+	<script type="text/javascript">
+		window.alert("実行します！");
+		window.document.form1.text1.value = "ここがform1.text1に入るよ";
+		window.document.form1.text2.value = "ここがform1.text2に入るよ";
+		window.document.form2.text1.value = "ここがform2.text1に入るよ";
+		window.document.form2.text2.value = "ここがform2.text1に入るよ";
+	</script>
+</body>
+
+</html>
