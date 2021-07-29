@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=”Shift_JIS”>
+	<title>ページの背景を変える</title>
+	<script type="text/javascript">
+		function changeColor() {
+			window.document.body.style.backgroundColor = 'red';
+		}
+	</script>
+	<style type="text/css">
+		body {
+			background-color: #cae4ff;
+		}
+
+		input {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<p>ページの色を変えてみよう！</p>
+		<input type="button" onClick="changeColor()" value="わわわわ！">
+		<h2>注意</h2>
+		<ol>
+			<li>window.document.bgColor = 'red';</li>
+			<li>window.document.body.style = 'red';</li>
+		</ol>
+		<p>1は、デフォルトの背景（＝CSSでbackground-colorを指定してない）から、<br>
+			背景を変えるときはこれ<br>
+			2は、CSSで背景色を指定している時、さらに背景色を変えたい時に使用する<br>
+			（CSSで背景色指定してるのに、１の書き方をすると、CSSで上書きされて、結局色が変わらない）
+		</p>
+		<h1>DOMってなんぞ！</h1>
+		<P>Document Object Modelのことで、HTML全体を１つのオブジェクトとしてみること。<br>
+			documnet＜html＜body＜div,p,h1,a,spanとかのタグを「ノード」と言う。<br>
+			＜button＞などのタグは「エレメントノード」、テキストで表されるものは「テキストノード」<br>
+			トップレベルの要素は「document」オブジェクト</P>
+		<h1>APIってなんぞ！</h1>
+		<p>インターフェース、なにかとなにかをつなぐこと<br>
+			つまり、DOM APIは、HTMLを大きいオブジェクトと見た時、それを操作するための書き方のこと<br>
+		</p>
+		<img src="IMG_DOM_API.jpeg">
+		<h2>JSでCSSをうごかそ！</h2>
+		<p>document.body.style.backgroundColor<br>
+			<ol>
+				<li>documentロッカーに色々タグ名あるけど、今回はbody!</li>
+				<li>bodyロッカーの中で、CSSに当たる部分が入っている扉は「style」</li>
+				<li>styleロッカーにはいろんなCSSの式の名前扉があるけど、background-colorを変えたい！→JSは-が使えないので「backgroundColor」で指定！</li>
+			</ol>
+			<img src="IMG_changeCSSfromJS.jpeg">
+		</p>
+	</div>
+</body>
+
+</html>

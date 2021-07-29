@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=”Shift_JIS”>
+	<title>動きのあるボタン！</title>
+	<script type="text/javascript">
+		// テキストを追加する関数
+		function addText(event) {
+			var box = event.target.parentNode;
+			var pNode = document.createElement('p');
+
+			pNode.innerHTML = 'テキストが追加されました';
+			box.appendChild(pNode);
+		}
+
+		// ウィンドウの読み込み完了イベントの監視
+		window.addEventListener("load", function (event) {
+			// change-textっていうidをもつタグを探してきて、その場所を"button"に突っ込む
+			var button = document.getElementById("change-text");
+
+			// クリックイベントを監視（<button>の"click"があれば、こうしよう）
+			button.addEventListener("click", addText, false);
+		}, false);
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<button id="change-text">テキストを追加する</button>
+		<h1>あれー、onClick（イベントハンドラー）ないやん</h1>>
+		…Javascriptでクリックあったかどうか管理してる（監視）！</p>
+		<h2>→Javascriptでのイベントの監視方法</h2>
+		<h4>エレメントノード（buttonとか）.addEventListner("イベント名『clickとか』",イベントハンドラー（イベントがあった時に実行したい関数名）,キャプチャリングフラグ（イベントの伝搬に関する設定、今の所falseでOK）)
+		</h4>
+		<h2>■window.addEventListener("load", function (event)…ってなによ</h2>
+		<p>webブラウザが『ページ読んだ！』ってなってからじゃないと動かせないから、<br>
+			windownの読み込みもjavascriptで監視して、"load"したらfunction(){ボタンclickしたらテキスト入れてー}という指示をする。</p>
+		<h3>イベントの解除（clickしたらテキストいれてもらったけど、やっぱやめる）</h3>
+		<p>エレメントノード.removeEventListner("イベント名",イベントハンドラー（関数）)</p>
+		<h1>■event.target.parentNodetってなんやねん</h1>
+		<h3>今回、addTextがイベントハンドラーになるのだが、<br>
+			引数はeventでイベントオブジェクトが自動的に渡される<br>
+			そのイベントオブジェクトが持つプロパティは以下</h3>
+		<img src="IMG_eventpropaty.jpeg">
+		<p>event.target＝イベントが発生（click）したときの要素（タグ）→今回はbutton!</p>
+		<h3>■parentNodeてなんやねん</h3>
+		<p>その要素の親要素！＝つまり、button要素の親なのでdiv!!のことを指してるよ！<br>
+			でー、createElement('p')で＜ｐ＞作って、<br>
+			innerHTMLは今話してる要素がもってる中身のことを指すから、<br>
+			pNode.innerHTML で、＜ｐ＞の中身まで設定する→したのが、pNode<br>
+			で、box.appendChild(pNode)で、divの中にpNode(作ったpタグ)を入れてあげてー、で完了
+		</p>
+		<img src="IMG_DOMnakamiOu.jpeg">
+	</div>
+</body>
+
+</html>

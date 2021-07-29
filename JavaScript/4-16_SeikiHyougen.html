@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset=”Shift_JIS”>
+	<titile>正規表現</titile>
+	<script type="text/javascript">
+
+	</script>
+</head>
+
+<body>
+	<h2>正規表現とは</h2>
+	<p>文字列の検証と置換！<br>
+		var regex = new RegExp("Apple");<br>
+		または<br>
+		var regex = /Apple/;</p>
+	<h3>使い方</h3>
+	<p>var juice = "Apple juice";<br>
+		var regex = /Apple/;<br>
+		window.document.write(juice.replace(regex, "Orange"));</p>
+	<h3>文字列が数字だけなのかチェックしたい</h3>
+	<p>var str = "12345678";<br>
+		var regex = /^[0-9]+$/;<br>
+		regex.text(str);</p>
+	<h4>■正規表現の例</h4>
+	<ul>
+		<li>/^[0-9]+$/…数字のみか？</li>
+		<li>/^[a-z]+$/…小文字アルファベットのみか？</li>
+		<li>/^[a-zA-Z]+$/…大文字または小文字のアルファベットのみか？</li>
+		<li>/^[0-9a-zA-Z]+$/…半角英数字のみか？</li>
+	</ul>
+	<p>^…先頭、$…文字の末尾</p>
+</body>
+
+</html>

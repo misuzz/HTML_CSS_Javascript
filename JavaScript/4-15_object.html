@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta charset=”Shift_JIS”>
 	<titile>オブジェクト</titile>
 	<script type="text/javascript">
-
+		function fruitsName() {
+			var obj = new Object();
+			obj.apple = "これはりんごっす";
+			var msg = "<p>" + obj.apple + "</P>";
+			document.getElementById("fruits").innerHTML = msg;
+		}
 	</script>
 </head>
 
@@ -52,7 +58,16 @@
 		<li>parseInt()…文字列を数値に変換</li>
 		<li>unescape()…エスケープされた文字列をデコードする</li>
 	</ul>
-
+	<img src="kumikomiMethod.jpeg">
+	<h2>オブジェクトを自分で作る</h2>
+	<P>var obj=new Object();で自分だけのオブジェクト！<br>
+		【ex】<br>
+		var obj=new Object();<br>
+		obj.apple="これはりんごです"<br>
+		obj.orange="これはみかんです"<br>
+		window.document.write(obj.apple);<br>
+	</P>
+	<div id="fruits"></div>
 </body>
 
 </html>
